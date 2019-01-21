@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>AC</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>26200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>192</width>
+        <height>320</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>criar_personagem</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="3206956448522659">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Text" sid="2985603725420557">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="estudante" sid="637493059751237">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type global="1" name="classes" sid="277180304978956">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="classe_selecionada" sid="109615395707647">
+            <plugin id="Dictionary" />
+            <instance-variables>
+                <instance-variable name="autal" sid="910635496858824" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type global="1" name="mago" sid="672910357188273">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="bk" sid="325491486555319">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\rotc_\Pictures\retropixelUI\bg\bg_01.png" />
+            <tiles />
+        </object-type>
+        <object-type name="caixa" sid="272385934863272">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543602309875627" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rotc_\Pictures\retropixelUI\hole\hole_07.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.0363636" />
+                            <point x="0.5" y="0.0181818" />
+                            <point x="0.979167" y="0.0363636" />
+                            <point x="0.979167" y="0.963636" />
+                            <point x="0.5" y="0.981818" />
+                            <point x="0.0208333" y="0.963636" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="caixa_selecao" sid="111301668391687">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\rotc_\Pictures\retropixelUI\hole\hole_07.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Box" sid="987742927962795">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411244813966129" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\rotc_\Pictures\retropixelUI\hole\hole_green_07.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.02" />
+                            <point x="0.5" y="0" />
+                            <point x="0.98" y="0.02" />
+                            <point x="0.96" y="0.96" />
+                            <point x="0.02" y="0.98" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="nome" sid="956171126429053">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="600099770333292" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="nome_box" sid="471614749781449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767963182355881" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.529412" original-source="C:\Users\rotc_\Pictures\retropixelUI\titles\title_blue_14.png">
+                        <collision-poly>
+                            <point x="0.00543478" y="0.0588235" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994565" y="0.0588235" />
+                            <point x="0.98913" y="0.882353" />
+                            <point x="0.0108696" y="0.882353" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="direita" sid="318062348486893">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479822158597482" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rotc_\Pictures\retropixelUI\icons\icon_blue_06.png">
+                        <collision-poly>
+                            <point x="0.4" y="0.571429" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.75" y="0.357143" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.75" y="0.642857" />
+                            <point x="0.5" y="0.857143" />
+                            <point x="0.4" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="esquerda" sid="935026977291055">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976807713078840" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rotc_\Pictures\retropixelUI\icons\icon_blue_06.png">
+                        <collision-poly>
+                            <point x="0.6" y="0.428571" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.25" y="0.642857" />
+                            <point x="0.2" y="0.5" />
+                            <point x="0.25" y="0.357143" />
+                            <point x="0.5" y="0.142857" />
+                            <point x="0.6" y="0.571429" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="descricao" sid="712816704878763">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="nome_" sid="860940677473242">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="teste" sid="217433440088643">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="nome_personagem" sid="741663683935041">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="SpriteFont" sid="378054029355241">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="CRIAR" sid="137251375244380">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="276000434271684" speed="5">
+                    <frame duration="1" hotspotX="0.504854" hotspotY="0.5" original-source="C:\Users\rotc_\Pictures\retropixelUI\buttons\cyan_08.png">
+                        <collision-poly>
+                            <point x="0.00970874" y="0.0294118" />
+                            <point x="0.495146" y="0" />
+                            <point x="0.990291" y="0.0294118" />
+                            <point x="0.990291" y="0.970588" />
+                            <point x="0.495146" y="0.970588" />
+                            <point x="0.0194175" y="0.941176" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CRIAR_TXT" sid="738164088271586">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="criar_personagem" sid="223362654958473">
+            <plugin id="Function" />
+        </object-type>
+        <object-type global="1" name="Personagem" sid="232835170866177">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="perso_nome" sid="114536164946690">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="status_window" sid="160361091516789">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\rotc_\Pictures\retropixelUI\buttons\cyan_03.png" />
+            <tiles />
+        </object-type>
+        <object-type name="status_txt" sid="758462512073823">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="icons" sid="651683804470220">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\rotc_\Documents\Games\Dudinha\img\system\IconSet.png" />
+            <tiles />
+        </object-type>
+        <object-type name="HP" sid="521581935327286">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="POWER" sid="958415880316275">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Agilidade" sid="766162110889230">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="DESTREZA" sid="599263917841443">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="rESISTENCIA" sid="659140517401002">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type global="1" name="MOB" sid="252204951912880">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="SCREEN" sid="343832047645224">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="MHP" sid="640796472729096">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>criar_personagem.xml</layout>
+        <layout>game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>main.xml</event-sheet>
+        <event-sheet>classe.xml</event-sheet>
+        <event-sheet>personagem.xml</event-sheet>
+        <event-sheet>game.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+        <global-instance type="criar_personagem" uid="24" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

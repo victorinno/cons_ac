@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>personagem</name>
+    <events>
+        <include>classe</include>
+        <event-block sid="865103748418411">
+            <conditions>
+                <condition id="3" name="On touched object" sid="536926647170474" type="Touch">
+                    <param id="0" name="Object">CRIAR</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="891532717220469" type="criar_personagem">
+                    <param id="0" name="Name">&quot;criar_personagem&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="620286593275618">
+            <conditions>
+                <condition id="0" name="On function" sid="139373890555231" type="criar_personagem">
+                    <param id="0" name="Name">&quot;criar_personagem&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="389191653439433" type="Personagem">
+                    <param id="0" name="Key">&quot;nome&quot;</param>
+                    <param id="1" name="Value">nome_personagem.Text</param>
+                </action>
+                <action id="0" name="Add key" sid="308649900533688" type="Personagem">
+                    <param id="0" name="Key">&quot;classe&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;nome&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="619117585313531" type="Personagem">
+                    <param id="0" name="Key">&quot;p&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;p&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="726778971754049" type="Personagem">
+                    <param id="0" name="Key">&quot;d&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;d&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="981423680264337" type="Personagem">
+                    <param id="0" name="Key">&quot;a&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;a&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="273725952600528" type="Personagem">
+                    <param id="0" name="Key">&quot;r&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;r&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="376177423499690" type="Personagem">
+                    <param id="0" name="Key">&quot;hp&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;hp&quot;) * 5</param>
+                </action>
+                <action id="0" name="Add key" sid="238801337641756" type="Personagem">
+                    <param id="0" name="Key">&quot;mhp&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;hp&quot;) * 5</param>
+                </action>
+                <action id="0" name="Add key" sid="735801701543182" type="Personagem">
+                    <param id="0" name="Key">&quot;cp&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;p&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="683727493720901" type="Personagem">
+                    <param id="0" name="Key">&quot;cd&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;d&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="347506207125409" type="Personagem">
+                    <param id="0" name="Key">&quot;ca&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;a&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="358504851045925" type="Personagem">
+                    <param id="0" name="Key">&quot;cr&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;r&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="560120101929287" type="Personagem">
+                    <param id="0" name="Key">&quot;chp&quot;</param>
+                    <param id="1" name="Value">classe_selecionada.Get(&quot;hp&quot;)</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="863253167443141" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+                <action id="0" name="Add key" sid="890050093603700" type="MOB">
+                    <param id="0" name="Key">&quot;hp&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="944139718351494">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="355053027681080" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="520233036458577" type="DESTREZA">
+                    <param id="0" name="Text">Personagem.Get(&quot;d&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="970183743070843" type="rESISTENCIA">
+                    <param id="0" name="Text">Personagem.Get(&quot;r&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="231223991749518" type="POWER">
+                    <param id="0" name="Text">Personagem.Get(&quot;p&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="876969288439475" type="Agilidade">
+                    <param id="0" name="Text">Personagem.Get(&quot;a&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="874648766713454" type="DESTREZA">
+                    <param id="0" name="Text">Personagem.Get(&quot;d&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="541202496821077" type="HP">
+                    <param id="0" name="Text">Personagem.Get(&quot;hp&quot;) &amp; &quot;/&quot; &amp; Personagem.Get(&quot;mhp&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

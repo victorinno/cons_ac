@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>game</name>
+    <events>
+        <variable constant="0" name="pause" sid="601423285140457" static="0" type="number">1</variable>
+        <variable constant="0" name="chance" sid="975013943095823" static="0" type="number">0</variable>
+        <variable constant="0" name="mchance" sid="480966539876278" static="0" type="number">0</variable>
+        <include>classe</include>
+        <include>personagem</include>
+        <event-block sid="954555827225518">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="136838686567034" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="313903816517582" type="perso_nome">
+                    <param id="0" name="Text">Personagem.Get(&quot;nome&quot;)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="377385173529432">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="583461586488116" type="MOB">
+                            <param id="0" name="Key">&quot;hp&quot;</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="242952789078647" type="criar_personagem">
+                            <param id="0" name="Name">&quot;criar_mob&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="176167114636171">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="351472197052134" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="360354798981720">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="223483400950943" type="Personagem">
+                            <param id="0" name="Key">&quot;hp&quot;</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="908378520156229" type="System">
+                            <param id="0" name="Layout">criar_personagem</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="843583428586645">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="692206570261019" type="System">
+                    <param id="0" name="Interval (seconds)">0.3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="507271447259521" type="System">
+                    <param id="0" name="Variable">pause</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="318100696504971" type="Personagem">
+                    <param id="0" name="Key">&quot;v&quot;</param>
+                    <param id="1" name="Value">Personagem.Get(&quot;v&quot;) + (1 * (Personagem.Get(&quot;a&quot;) / (Personagem.Get(&quot;a&quot;) + MOB.Get(&quot;a&quot;)   )))</param>
+                </action>
+                <action id="0" name="Add key" sid="662666482710168" type="MOB">
+                    <param id="0" name="Key">&quot;v&quot;</param>
+                    <param id="1" name="Value">MOB.Get(&quot;v&quot;) + ( 1 * (MOB.Get(&quot;a&quot;) / (Personagem.Get(&quot;a&quot;) + MOB.Get(&quot;a&quot;)) ))</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="142434323100491">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="434246861424052" type="Personagem">
+                            <param id="0" name="Key">&quot;v&quot;</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="916657465299038" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="302579805774617" type="Personagem">
+                            <param id="0" name="Key">&quot;v&quot;</param>
+                            <param id="1" name="Value">Personagem.Get(&quot;v&quot;)-1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="953306549297182" type="criar_personagem">
+                            <param id="0" name="Name">&quot;patack&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="416258746290138">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="997808635875071" type="MOB">
+                            <param id="0" name="Key">&quot;v&quot;</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="460817469846259" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="858916382569610" type="MOB">
+                            <param id="0" name="Key">&quot;v&quot;</param>
+                            <param id="1" name="Value">Personagem.Get(&quot;v&quot;)-1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="819772952181611" type="criar_personagem">
+                            <param id="0" name="Name">&quot;matack&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="582017953356410">
+            <conditions>
+                <condition id="0" name="On function" sid="213554604739674" type="criar_personagem">
+                    <param id="0" name="Name">&quot;criar_mob&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="506797310015521" type="MOB">
+                    <param id="0" name="Key">&quot;hp&quot;</param>
+                    <param id="1" name="Value">ceil(Personagem.Get(&quot;hp&quot;) * 0.85)</param>
+                </action>
+                <action id="0" name="Add key" sid="133339055196497" type="MOB">
+                    <param id="0" name="Key">&quot;p&quot;</param>
+                    <param id="1" name="Value">ceil(Personagem.Get(&quot;p&quot;) * 0.85)</param>
+                </action>
+                <action id="0" name="Add key" sid="649472996582702" type="MOB">
+                    <param id="0" name="Key">&quot;d&quot;</param>
+                    <param id="1" name="Value">ceil(Personagem.Get(&quot;d&quot;) * 0.85)</param>
+                </action>
+                <action id="0" name="Add key" sid="293624616982366" type="MOB">
+                    <param id="0" name="Key">&quot;a&quot;</param>
+                    <param id="1" name="Value">ceil(Personagem.Get(&quot;a&quot;) * 0.85)</param>
+                </action>
+                <action id="0" name="Add key" sid="260506313723270" type="MOB">
+                    <param id="0" name="Key">&quot;r&quot;</param>
+                    <param id="1" name="Value">ceil(Personagem.Get(&quot;r&quot;) * 0.85)</param>
+                </action>
+                <action id="0" name="Add key" sid="643825981235342" type="MOB">
+                    <param id="0" name="Key">&quot;v&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="649689337593291" type="Personagem">
+                    <param id="0" name="Key">&quot;v&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="1" name="Set key" sid="267665988920871" type="Personagem">
+                    <param id="0" name="Key">&quot;hp&quot;</param>
+                    <param id="1" name="Value">Personagem.Get(&quot;mhp&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="319574616781019" type="SCREEN">
+                    <param id="0" name="Text">&quot;Um inimigo apareceu!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="189108289632613" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Set text" sid="432290753671591" type="SCREEN">
+                    <param id="0" name="Text">MOB.Get(&quot;hp&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="440377623395635" type="MHP">
+                    <param id="0" name="Text">&quot;MOB: &quot; &amp; MOB.Get(&quot;hp&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="327034826858960" type="System">
+                    <param id="0" name="Variable">pause</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530938593770320">
+            <conditions>
+                <condition id="0" name="On function" sid="464668953885396" type="criar_personagem">
+                    <param id="0" name="Name">&quot;patack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="400635358115156" type="System">
+                    <param id="0" name="Variable">pause</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="862548336044845" type="SCREEN">
+                    <param id="0" name="Text">Personagem.Get(&quot;nome&quot;) &amp; &quot; ataca!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="834632452159548" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="819908933502702" type="System">
+                    <param id="0" name="Variable">chance</param>
+                    <param id="1" name="Value">random(0,99)</param>
+                </action>
+                <action id="0" name="Call function" sid="617711402131245" type="criar_personagem">
+                    <param id="0" name="Name">&quot;validade&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="898607974078069">
+            <conditions>
+                <condition id="0" name="On function" sid="800930537967460" type="criar_personagem">
+                    <param id="0" name="Name">&quot;matack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="583167599683298" type="System">
+                    <param id="0" name="Variable">pause</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="415209203541813" type="SCREEN">
+                    <param id="0" name="Text">Personagem.Get(&quot;nome&quot;) &amp; &quot; sofre um ataque!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="251021668418647" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="505763474045548" type="System">
+                    <param id="0" name="Variable">mchance</param>
+                    <param id="1" name="Value">random(0,99)</param>
+                </action>
+                <action id="0" name="Call function" sid="860494643729881" type="criar_personagem">
+                    <param id="0" name="Name">&quot;mvalidade&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="936997497856894">
+            <conditions>
+                <condition id="0" name="On function" sid="645751044859434" type="criar_personagem">
+                    <param id="0" name="Name">&quot;validade&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="942111387657589">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="197072074781462" type="System">
+                            <param id="0" name="Variable">chance</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">Personagem.Get(&quot;d&quot;) / MOB.Get(&quot;a&quot;) * 100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="812680479816874" type="SCREEN">
+                            <param id="0" name="Text">Personagem.Get(&quot;nome&quot;) &amp; &quot; acertou!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="478792641810698" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="558377778992246" type="MOB">
+                            <param id="0" name="Key">&quot;hp&quot;</param>
+                            <param id="1" name="Value">MOB.Get(&quot;hp&quot;) - ceil( Personagem.Get(&quot;p&quot;) / (100 + MOB.Get(&quot;r&quot;)) )</param>
+                        </action>
+                        <action id="0" name="Set text" sid="460683463972151" type="SCREEN">
+                            <param id="0" name="Text">MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="284788999657212" type="MHP">
+                            <param id="0" name="Text">&quot;MOB: &quot; &amp; MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="280061706918477" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="179956338279734">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="351724111431612" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="143874695951438" type="SCREEN">
+                            <param id="0" name="Text">Personagem.Get(&quot;nome&quot;) &amp; &quot; errou!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="921638422412512" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="198737228017755" type="SCREEN">
+                            <param id="0" name="Text">MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="169038215546209" type="MHP">
+                            <param id="0" name="Text">&quot;MOB: &quot; &amp; MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="812112746007028" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="785840437402533">
+            <conditions>
+                <condition id="0" name="On function" sid="216975609046676" type="criar_personagem">
+                    <param id="0" name="Name">&quot;mvalidade&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="750416258684920">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="589656147009777" type="System">
+                            <param id="0" name="Variable">chance</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">MOB.Get(&quot;a&quot;) / Personagem.Get(&quot;d&quot;) * 100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="424736443888762" type="SCREEN">
+                            <param id="0" name="Text">Personagem.Get(&quot;nome&quot;) &amp; &quot; sofre dano!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="820832226512622" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="471076845749250" type="Personagem">
+                            <param id="0" name="Key">&quot;hp&quot;</param>
+                            <param id="1" name="Value">Personagem.Get(&quot;hp&quot;) - ceil( MOB.Get(&quot;p&quot;) / (100 + Personagem.Get(&quot;r&quot;)) )</param>
+                        </action>
+                        <action id="0" name="Set text" sid="514073490323719" type="SCREEN">
+                            <param id="0" name="Text">MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="545427255347492" type="MHP">
+                            <param id="0" name="Text">&quot;MOB: &quot; &amp; MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="682996189331985" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="892014109228586">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="391392322624771" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="931335232384201" type="SCREEN">
+                            <param id="0" name="Text">Personagem.Get(&quot;nome&quot;) &amp; &quot; esquivou!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="660650805493957" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="754552122861378" type="SCREEN">
+                            <param id="0" name="Text">MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="624686946466662" type="MHP">
+                            <param id="0" name="Text">&quot;MOB: &quot; &amp; MOB.Get(&quot;hp&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="690137851350034" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

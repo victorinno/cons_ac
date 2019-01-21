@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>main</name>
+    <events>
+        <include>classe</include>
+        <include>personagem</include>
+        <event-block sid="581547401812563">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="753015403001627" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="898330823173842" type="classe_selecionada">
+                    <param id="0" name="JSON">classes.At(classe_selecionada.autal)</param>
+                </action>
+                <action id="0" name="Set text" sid="280549456849284" type="descricao">
+                    <param id="0" name="Text">classe_selecionada.Get(&quot;descricao&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="872621417209797" type="nome_">
+                    <param id="0" name="Text">classe_selecionada.Get(&quot;nome&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="511677508097398" type="teste">
+                    <param id="0" name="Text">classe_selecionada.autal</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="223951052352897">
+            <conditions>
+                <condition id="3" name="On touched object" sid="270950974503382" type="Touch">
+                    <param id="0" name="Object">direita</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="387378689704822">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="775032452227410" type="classe_selecionada">
+                            <param id="0" name="Instance variable">autal</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="977584707417024" type="classe_selecionada">
+                            <param id="0" name="Instance variable">autal</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="14" name="Log" sid="306239292135077" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;zerar&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="772066662946137" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">classe_selecionada.autal</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="850115320997352">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="798770375878828" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="278020598492777" type="classe_selecionada">
+                            <param id="0" name="Instance variable">autal</param>
+                            <param id="1" name="Value">classe_selecionada.autal+1</param>
+                        </action>
+                        <action id="14" name="Log" sid="855792851844153" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;aumentar&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="156079095324320" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">classe_selecionada.autal</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="264513580621261">
+            <conditions>
+                <condition id="3" name="On touched object" sid="977658443925418" type="Touch">
+                    <param id="0" name="Object">esquerda</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="301185202336069">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="363925535471274" type="classe_selecionada">
+                            <param id="0" name="Instance variable">autal</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="198374496291512" type="classe_selecionada">
+                            <param id="0" name="Instance variable">autal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="971439159667911">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="710468750368614" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="698618517336070" type="classe_selecionada">
+                            <param id="0" name="Instance variable">autal</param>
+                            <param id="1" name="Value">classe_selecionada.autal-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

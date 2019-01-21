@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>classe</name>
+    <events>
+        <event-block sid="707729070100730">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="684774342440911" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="899683768322048" type="estudante">
+                    <param id="0" name="Key">&quot;nome&quot;</param>
+                    <param id="1" name="Value">&quot;Estudante&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="699058644936969" type="estudante">
+                    <param id="0" name="Key">&quot;descricao&quot;</param>
+                    <param id="1" name="Value">&quot;Classe mediana&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="714898929327065" type="estudante">
+                    <param id="0" name="Key">&quot;p&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Add key" sid="951975585870979" type="estudante">
+                    <param id="0" name="Key">&quot;d&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Add key" sid="614974821561449" type="estudante">
+                    <param id="0" name="Key">&quot;a&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Add key" sid="300135566951992" type="estudante">
+                    <param id="0" name="Key">&quot;r&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Add key" sid="769218776799208" type="estudante">
+                    <param id="0" name="Key">&quot;hp&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="5" name="Push" sid="197991600386419" type="classes">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Value">estudante.AsJSON</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="0" name="Add key" sid="359981969800776" type="mago">
+                    <param id="0" name="Key">&quot;nome&quot;</param>
+                    <param id="1" name="Value">&quot;Mago&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="212408729357965" type="mago">
+                    <param id="0" name="Key">&quot;descricao&quot;</param>
+                    <param id="1" name="Value">&quot;Classe focada em poder&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="692425423197208" type="mago">
+                    <param id="0" name="Key">&quot;p&quot;</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="0" name="Add key" sid="626282522446868" type="mago">
+                    <param id="0" name="Key">&quot;d&quot;</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Add key" sid="263874944198026" type="mago">
+                    <param id="0" name="Key">&quot;a&quot;</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Add key" sid="673005697863907" type="mago">
+                    <param id="0" name="Key">&quot;r&quot;</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Add key" sid="901120367276645" type="mago">
+                    <param id="0" name="Key">&quot;hp&quot;</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="5" name="Push" sid="839273272742847" type="classes">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Value">mago.AsJSON</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
